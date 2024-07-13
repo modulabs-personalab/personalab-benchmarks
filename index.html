@@ -25,7 +25,7 @@
             {{uiState.loadedReport.controls.inventory}}
         </div>
 
-        <div id="barChart"></div>
+        <div id="barChart" ng-if="!!uiState.loadedReport"></div>
         <div ng-if="!!uiState.inventory.headers">
             <div class="text-2xl font-bold mt-3">Inventory {{uiState.loadedReport.controls.inventory}}</div>
             <table class="table table-auto bg-gray-100 border-gray-200 text-sm">
@@ -73,8 +73,8 @@
                 $scope.$apply(()=>{
                     $scope.uiState.inventory.headers = headers;
                     $scope.uiState.inventory.values = values;
+                    $scope.drawBarChart(headers, values);
                 });
-                // drawBarChart(headers, values);
             }
 
             $scope.fetchJson = async (url)=>{
