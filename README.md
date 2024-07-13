@@ -1,8 +1,12 @@
-# LLM 성격 평가
+# 개요
 
 [논문](https://arxiv.org/abs/2206.07550) 을 기반으로 한 프로젝트 입니다. 여러 LLM 의 Internal consistency 와 Inducing personality 를 실험합니다.
 
+테스트 결과를 [이곳](https://ho4040.github.com/personalab-benchmarks)을 통해서 시각화 하는 프로젝트 입니다. 
+
 # 프로젝트 기여 방법
+
+이하 내용을 작업 한 후 Pull request 를 보내주세요.
 
 `codes` 폴더에 새로운 코드를 작성합니다. 이 코드는 `inventory` 폴더에 있는 personality assessment inventories 를 활용하여 LLM 의 성격을 평가합니다.
 
@@ -34,3 +38,11 @@
     ]
 }
 ```
+
+
+
+# TODO
+
+[] 차트 그리기
+[] 관련 코드 링크
+[] 템플릿 보기
