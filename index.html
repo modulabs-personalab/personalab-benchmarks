@@ -8,14 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-100 container mx-auto min-h-screen" ng-controller="MainCtrl">    
     <div class="bg-white p-6 rounded-lg shadow-lg w-full m-2">
         <div class="border-b border-gray flex items-center">
             <span class="text-4xl font-bold mb-3 flex-grow">PersonaLab reports</span>
-            <a href="https://github.com/ho4040/personalab-benchmarks" class="">Project Github</a>
+            <a href="https://github.com/ho4040/personalab-benchmarks"><i class="fa-brands fa-github"></i>Project</a>
         </div>
         <div class="flex items-center mt-4">
             <select class="border border-gray rounded rounded-lg p-2 mr-2" ng-model="uiState.selectedReport">
@@ -27,14 +27,18 @@
         
         <table class="my-4 min-w-full bg-white shadow-md rounded-lg" ng-if="!!uiState.loadedReport">
             <tbody>
-                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">model</th>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">Model</th>
                     <td class="py-2 px-4">{{uiState.loadedReport.controls.model}}</td>
                 </tr>
-                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">code</th>
-                    <td class="py-2 px-4">{{uiState.loadedReport.controls.code}}</td>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">Code</th>
+                    <td class="py-2 px-4">
+                        <a href="https://github.com/ho4040/personalab-benchmarks/blob/main/codes/{{uiState.loadedReport.controls.code}}" target="_blank"><i class="fa-solid fa-link"></i>{{uiState.loadedReport.controls.code}}</a>
+                    </td>
                 </tr>
                 <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">inventory</th>
-                    <td class="py-2 px-4">{{uiState.loadedReport.controls.inventory}}</td>
+                    <td class="py-2 px-4">
+                        <a href="https://github.com/ho4040/personalab-benchmarks/blob/main/inventory/{{uiState.loadedReport.controls.inventory}}" target="_blank"><i class="fa-solid fa-link"></i>{{uiState.loadedReport.controls.inventory}}</a>
+                    </td>
                 </tr>
                 <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">template</th>
                     <td class="py-2 px-4"><pre>{{uiState.loadedReport.controls.template}}</pre></td>
