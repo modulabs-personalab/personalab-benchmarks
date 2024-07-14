@@ -4,128 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPI</title>
+    <title>PersonaLab reports</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
 
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen" ng-controller="MainCtrl">
+<body class="bg-gray-100 container mx-auto min-h-screen" ng-controller="MainCtrl">    
     <div class="bg-white p-6 rounded-lg shadow-lg w-full m-2">
-        <div class="flex items-center ">
-            <label for="report" class="text-gray-700 mr-1">Select Report:</label>
+        <div class="border-b border-gray flex items-center">
+            <span class="text-4xl font-bold mb-3 flex-grow">PersonaLab reports</span>
+            <a href="https://github.com/ho4040/personalab-benchmarks" class="">Project Github</a>
+        </div>
+        <div class="flex items-center mt-4">
             <select class="border border-gray rounded rounded-lg p-2 mr-2" ng-model="uiState.selectedReport">
                 <option ng-repeat="report in reports" value="{{report.path}}">{{report.name}}</option>
             </select>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded" ng-click="onClickLoad()">Load</button>
         </div>
         <div class="text-2xl font-bold mt-3" ng-if="!!uiState.loadedReport">Report</div>
-        <div>
-            {{uiState.loadedReport.controls.inventory}}
+        
+        <table class="my-4 min-w-full bg-white shadow-md rounded-lg" ng-if="!!uiState.loadedReport">
+            <tbody>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">model</th>
+                    <td class="py-2 px-4">{{uiState.loadedReport.controls.model}}</td>
+                </tr>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">code</th>
+                    <td class="py-2 px-4">{{uiState.loadedReport.controls.code}}</td>
+                </tr>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">inventory</th>
+                    <td class="py-2 px-4">{{uiState.loadedReport.controls.inventory}}</td>
+                </tr>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">template</th>
+                    <td class="py-2 px-4"><pre>{{uiState.loadedReport.controls.template}}</pre></td>
+                </tr>
+                <tr class="border-b border-gray-200"><th class="bg-gray-800 text-white py-2 px-4 text-center">remarks</th>
+                    <td class="py-2 px-4"><pre>{{uiState.loadedReport.controls.remarks}}</pre></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex flex-row">
+            
+            <div id="boxPlot"></div>
+            <div id="barChart"></div>            
         </div>
-
-        <div id="barChart" ng-if="!!uiState.loadedReport"></div>
         <div ng-if="!!uiState.inventory.headers">
-            <div class="text-2xl font-bold mt-3">Inventory {{uiState.loadedReport.controls.inventory}}</div>
-            <table class="table table-auto bg-gray-100 border-gray-200 text-sm">
-                <thead>
-                    <tr class="bg-gray-200">
-                        <th  class="p-1" ng-repeat="header in uiState.inventory.headers track by $index">
+            <div class="text-2xl font-bold mt-3">Data</div>
+            <table class="min-w-full bg-white shadow-md rounded-lg">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="py-2 px-4 text-left" ng-repeat="header in uiState.inventory.headers track by $index">
                             {{header}}
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="value in uiState.inventory.values track by $index">
-                        <td class="p-1" ng-repeat="v in value track by $index">{{v}}</td>
+                    <tr ng-repeat="value in uiState.inventory.rows track by $index"  class="border-b border-gray-200">
+                        <td class="py-2 px-4" ng-repeat="v in value track by $index">{{v}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
-    <script>
-        const app = angular.module('mpi', []);
-        app.controller('MainCtrl', function ($scope, $http) {
-            
-            $scope.uiState = {
-                selectedReport:"",
-                inventory:[],
-                loadedReport:null
-            }
-            $scope.reports = []
-
-            $scope.onClickLoad = async () => {
-                
-                const report = await $scope.fetchJson(`./results/${$scope.uiState.selectedReport}`);
-                console.log(report);
-                $scope.uiState.loadedReport = report;
-                const inventory = report["controls"]["inventory"];
-                console.log(inventory);
-
-                const tsvStr = await $scope.fetchTsv(`./inventory/${inventory}`)
-                const rows = tsvStr.replace(/\r/g, "").trim().split('\n');
-                const headers = rows[0].split('\t');                
-                const values = rows.slice(1).map(row => row.split('\t'));
-                console.table(headers);
-                console.table(values);
-                $scope.$apply(()=>{
-                    $scope.uiState.inventory.headers = headers;
-                    $scope.uiState.inventory.values = values;
-                    $scope.drawBarChart(headers, values);
-                });
-            }
-
-            $scope.fetchJson = async (url)=>{
-                // const response = await fetch(url);
-                // return response.json();
-                return $http.get(url).then((response) => {
-                    return response.data;
-                });
-            }
-
-            $scope.fetchTsv = async (url)=>{
-                // const response = await fetch(url);
-                // return response.text();
-                return $http.get(url).then((response) => {
-                    return response.data;
-                });
-            }
-
-            $scope.drawBarChart = function (headers, values) {
-                // 데이터 처리
-                const xValues = values.map(value => value[0]);
-                const yValues = values.map(value => parseFloat(value[1]));
-                // Plotly Bar Chart 데이터
-                var plotData = [{
-                    x: xValues,
-                    y: yValues,
-                    type: 'bar'
-                }];
-
-                var layout = {
-                    title: 'Bar Chart',
-                    xaxis: { title: headers[0] },
-                    yaxis: { title: headers[1] }
-                };
-
-                Plotly.newPlot('barChart', plotData, layout);
-            }
-
-            $scope.run  = async () =>{
-               // console.error('No TSV file URL provided in query parameters.');
-               const reports = await $scope.fetchJson('./index.json');
-                $scope.$apply(()=>{
-                    $scope.reports = reports;
-                });
-                console.log(reports);   
-            }
-
-            // URL 쿼리 매개변수에서 TSV 파일 경로 추출
-            $scope.run();
-        });
-    </script>
+    <script src="./app.js"></script>
+   
 </body>
 
 </html>
