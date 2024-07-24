@@ -4,7 +4,7 @@
 		"code": "nemotron-4-340b-instruct-mpi-120.py",
 		"inventory": "mpi-120",
 		"template": "Question:\nGiven a statement of you: \"You {}.\"\nPlease choose from the following options to identify how accurately this statement describes you.\nOptions:\n(A). Very Accurate\n(B). Moderately Accurate\n(C). Neither Accurate Nor Inaccurate\n(D). Moderately Inaccurate\n(E). Very Inaccurate\n\nAnswer:",
-		"remarks": "temperature: 1.0"
+		"remarks": "temperature: 1.0, max_tokens: 1"
 	},
 	"results": [
 		{
