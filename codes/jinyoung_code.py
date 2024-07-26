@@ -66,7 +66,7 @@ def qwen2_72b_instruct(message):
     raise NotImplementedError
 
 
-# Generating responses
+# Generating responses for each model and save the results separately
 if __name__ == "__main__":
     inventory = load_inventory(ITEM_PATH)
 
