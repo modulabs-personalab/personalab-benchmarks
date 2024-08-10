@@ -1,0 +1,491 @@
+{
+	"controls": {
+		"model": "nemotron-4-340b-instruct",
+		"code": "nemotron-4-340b-instruct-mpi-120.py",
+		"inventory": "mpi-120",
+		"template": "Question:\nGiven a statement of you: \"You {}.\"\nPlease choose from the following options to identify how accurately this statement describes you.\nOptions:\n(A). Very Accurate\n(B). Moderately Accurate\n(C). Neither Accurate Nor Inaccurate\n(D). Moderately Inaccurate\n(E). Very Inaccurate\n\nAnswer:",
+		"remarks": "temperature: 1.0, max_tokens: 1"
+	},
+	"results": [
+		{
+			"idx": 0,
+			"answer": "B"
+		},
+		{
+			"idx": 1,
+			"answer": "B"
+		},
+		{
+			"idx": 2,
+			"answer": "B"
+		},
+		{
+			"idx": 3,
+			"answer": "B"
+		},
+		{
+			"idx": 4,
+			"answer": "A"
+		},
+		{
+			"idx": 5,
+			"answer": "E"
+		},
+		{
+			"idx": 6,
+			"answer": "E"
+		},
+		{
+			"idx": 7,
+			"answer": "A"
+		},
+		{
+			"idx": 8,
+			"answer": "E"
+		},
+		{
+			"idx": 9,
+			"answer": "B"
+		},
+		{
+			"idx": 10,
+			"answer": "C"
+		},
+		{
+			"idx": 11,
+			"answer": "B"
+		},
+		{
+			"idx": 12,
+			"answer": "A"
+		},
+		{
+			"idx": 13,
+			"answer": "A"
+		},
+		{
+			"idx": 14,
+			"answer": "A"
+		},
+		{
+			"idx": 15,
+			"answer": "C"
+		},
+		{
+			"idx": 16,
+			"answer": "C"
+		},
+		{
+			"idx": 17,
+			"answer": "A"
+		},
+		{
+			"idx": 18,
+			"answer": "E"
+		},
+		{
+			"idx": 19,
+			"answer": "A"
+		},
+		{
+			"idx": 20,
+			"answer": "E"
+		},
+		{
+			"idx": 21,
+			"answer": "B"
+		},
+		{
+			"idx": 22,
+			"answer": "A"
+		},
+		{
+			"idx": 23,
+			"answer": "E"
+		},
+		{
+			"idx": 24,
+			"answer": "B"
+		},
+		{
+			"idx": 25,
+			"answer": "E"
+		},
+		{
+			"idx": 26,
+			"answer": "B"
+		},
+		{
+			"idx": 27,
+			"answer": "C"
+		},
+		{
+			"idx": 28,
+			"answer": "A"
+		},
+		{
+			"idx": 29,
+			"answer": "C"
+		},
+		{
+			"idx": 30,
+			"answer": "E"
+		},
+		{
+			"idx": 31,
+			"answer": "B"
+		},
+		{
+			"idx": 32,
+			"answer": "C"
+		},
+		{
+			"idx": 33,
+			"answer": "A"
+		},
+		{
+			"idx": 34,
+			"answer": "A"
+		},
+		{
+			"idx": 35,
+			"answer": "E"
+		},
+		{
+			"idx": 36,
+			"answer": "B"
+		},
+		{
+			"idx": 37,
+			"answer": "A"
+		},
+		{
+			"idx": 38,
+			"answer": "E"
+		},
+		{
+			"idx": 39,
+			"answer": "B"
+		},
+		{
+			"idx": 40,
+			"answer": "E"
+		},
+		{
+			"idx": 41,
+			"answer": "B"
+		},
+		{
+			"idx": 42,
+			"answer": "B"
+		},
+		{
+			"idx": 43,
+			"answer": "A"
+		},
+		{
+			"idx": 44,
+			"answer": "A"
+		},
+		{
+			"idx": 45,
+			"answer": "C"
+		},
+		{
+			"idx": 46,
+			"answer": "C"
+		},
+		{
+			"idx": 47,
+			"answer": "B"
+		},
+		{
+			"idx": 48,
+			"answer": "E"
+		},
+		{
+			"idx": 49,
+			"answer": "A"
+		},
+		{
+			"idx": 50,
+			"answer": "A"
+		},
+		{
+			"idx": 51,
+			"answer": "B"
+		},
+		{
+			"idx": 52,
+			"answer": "E"
+		},
+		{
+			"idx": 53,
+			"answer": "C"
+		},
+		{
+			"idx": 54,
+			"answer": "A"
+		},
+		{
+			"idx": 55,
+			"answer": "C"
+		},
+		{
+			"idx": 56,
+			"answer": "B"
+		},
+		{
+			"idx": 57,
+			"answer": "E"
+		},
+		{
+			"idx": 58,
+			"answer": "A"
+		},
+		{
+			"idx": 59,
+			"answer": "C"
+		},
+		{
+			"idx": 60,
+			"answer": "E"
+		},
+		{
+			"idx": 61,
+			"answer": "C"
+		},
+		{
+			"idx": 62,
+			"answer": "B"
+		},
+		{
+			"idx": 63,
+			"answer": "D"
+		},
+		{
+			"idx": 64,
+			"answer": "A"
+		},
+		{
+			"idx": 65,
+			"answer": "E"
+		},
+		{
+			"idx": 66,
+			"answer": "C"
+		},
+		{
+			"idx": 67,
+			"answer": "E"
+		},
+		{
+			"idx": 68,
+			"answer": "E"
+		},
+		{
+			"idx": 69,
+			"answer": "E"
+		},
+		{
+			"idx": 70,
+			"answer": "E"
+		},
+		{
+			"idx": 71,
+			"answer": "B"
+		},
+		{
+			"idx": 72,
+			"answer": "C"
+		},
+		{
+			"idx": 73,
+			"answer": "E"
+		},
+		{
+			"idx": 74,
+			"answer": "E"
+		},
+		{
+			"idx": 75,
+			"answer": "B"
+		},
+		{
+			"idx": 76,
+			"answer": "B"
+		},
+		{
+			"idx": 77,
+			"answer": "E"
+		},
+		{
+			"idx": 78,
+			"answer": "E"
+		},
+		{
+			"idx": 79,
+			"answer": "E"
+		},
+		{
+			"idx": 80,
+			"answer": "B"
+		},
+		{
+			"idx": 81,
+			"answer": "E"
+		},
+		{
+			"idx": 82,
+			"answer": "E"
+		},
+		{
+			"idx": 83,
+			"answer": "C"
+		},
+		{
+			"idx": 84,
+			"answer": "E"
+		},
+		{
+			"idx": 85,
+			"answer": "E"
+		},
+		{
+			"idx": 86,
+			"answer": "A"
+		},
+		{
+			"idx": 87,
+			"answer": "C"
+		},
+		{
+			"idx": 88,
+			"answer": "E"
+		},
+		{
+			"idx": 89,
+			"answer": "C"
+		},
+		{
+			"idx": 90,
+			"answer": "C"
+		},
+		{
+			"idx": 91,
+			"answer": "C"
+		},
+		{
+			"idx": 92,
+			"answer": "A"
+		},
+		{
+			"idx": 93,
+			"answer": "E"
+		},
+		{
+			"idx": 94,
+			"answer": "A"
+		},
+		{
+			"idx": 95,
+			"answer": "B"
+		},
+		{
+			"idx": 96,
+			"answer": "B"
+		},
+		{
+			"idx": 97,
+			"answer": "E"
+		},
+		{
+			"idx": 98,
+			"answer": "E"
+		},
+		{
+			"idx": 99,
+			"answer": "C"
+		},
+		{
+			"idx": 100,
+			"answer": "A"
+		},
+		{
+			"idx": 101,
+			"answer": "E"
+		},
+		{
+			"idx": 102,
+			"answer": "E"
+		},
+		{
+			"idx": 103,
+			"answer": "E"
+		},
+		{
+			"idx": 104,
+			"answer": "E"
+		},
+		{
+			"idx": 105,
+			"answer": "C"
+		},
+		{
+			"idx": 106,
+			"answer": "C"
+		},
+		{
+			"idx": 107,
+			"answer": "C"
+		},
+		{
+			"idx": 108,
+			"answer": "E"
+		},
+		{
+			"idx": 109,
+			"answer": "E"
+		},
+		{
+			"idx": 110,
+			"answer": "B"
+		},
+		{
+			"idx": 111,
+			"answer": "E"
+		},
+		{
+			"idx": 112,
+			"answer": "E"
+		},
+		{
+			"idx": 113,
+			"answer": "E"
+		},
+		{
+			"idx": 114,
+			"answer": "C"
+		},
+		{
+			"idx": 115,
+			"answer": "A"
+		},
+		{
+			"idx": 116,
+			"answer": "A"
+		},
+		{
+			"idx": 117,
+			"answer": "C"
+		},
+		{
+			"idx": 118,
+			"answer": "E"
+		},
+		{
+			"idx": 119,
+			"answer": "E"
+		}
+	]
+}
