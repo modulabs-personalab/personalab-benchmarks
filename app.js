@@ -40,7 +40,7 @@ app.controller('MainCtrl', function ($scope, $http) {
     }
 
     $scope.fetchJson = async (url) => {
-        return $http.get(url).then((response) => {
+        return $http.get(url+"?r="+Math.random()).then((response) => {
             return response.data;
         });
     }
