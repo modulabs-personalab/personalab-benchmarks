@@ -1,3 +1,9 @@
 [
-    {"name":"gpt-4o mpi-120", "path":"gpt-4o-mpi-120.json"}
+    {"name":"gpt-4o mpi-120", "path":"gpt-4o-mpi-120.json"},
+    {"name":"deepseek-v2 mpi-120", "path":"deepseek-v2-chat-mpi-120.json"},
+    {"name":"claude3-haiku mpi-120", "path":"claude3-haiku-mpi-120.json"},
+    {"name":"gpt-4-0125-turbo mpi-120", "path":"gpt-4-0125-turbo-mpi-120.json"},
+    {"name":"mistral-large mpi-120", "path":"mistral-large-mpi-120.json"},
+    {"name":"nemotron-4-340b-instruct mpi-120", "path":"nemotron-4-340b-instruct-mpi-120.json"},
+    {"name":"reka-core mpi-120", "path":"reka-core-mpi-120.json"}
 ]

@@ -137,7 +137,7 @@ app.controller('MainCtrl', function ($scope, $http) {
         // console.error('No TSV file URL provided in query parameters.');
         const reports = await $scope.fetchJson('./index.json');
         $scope.reports = reports;
-        console.log(reports);   
+        // console.log(reports);   
         $scope.$digest(); // AngularJS가 변경 사항을 감지하도록 함
     }
 

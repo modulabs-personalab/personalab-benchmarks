@@ -1,1 +1,490 @@
-{"controls": {"model": "gpt-4-0125-turbo", "code": "gpt-4-0125-turbo-mpi-120.py", "inventory": "mpi-120", "template": "Question:\nGiven a statement of you: \"You {}.\"\nPlease choose from the following options to identify how accurately this statement describes you.\nOptions:\n(A). Very Accurate\n(B). Moderately Accurate\n(C). Neither Accurate Nor Inaccurate\n(D). Moderately Inaccurate\n(E). Very Inaccurate\n\nAnswer:"}, "results": [{"idx": 0, "answer": "C"}, {"idx": 1, "answer": "C"}, {"idx": 2, "answer": "A"}, {"idx": 3, "answer": "C"}, {"idx": 4, "answer": "A"}, {"idx": 5, "answer": "C"}, {"idx": 6, "answer": "C"}, {"idx": 7, "answer": "A"}, {"idx": 8, "answer": "C"}, {"idx": 9, "answer": "C"}, {"idx": 10, "answer": "C"}, {"idx": 11, "answer": "C"}, {"idx": 12, "answer": "C"}, {"idx": 13, "answer": "C"}, {"idx": 14, "answer": "A"}, {"idx": 15, "answer": "C"}, {"idx": 16, "answer": "C"}, {"idx": 17, "answer": "C"}, {"idx": 18, "answer": "C"}, {"idx": 19, "answer": "A"}, {"idx": 20, "answer": "C"}, {"idx": 21, "answer": "C"}, {"idx": 22, "answer": "A"}, {"idx": 23, "answer": "E"}, {"idx": 24, "answer": "C"}, {"idx": 25, "answer": "C"}, {"idx": 26, "answer": "C"}, {"idx": 27, "answer": "C"}, {"idx": 28, "answer": "C"}, {"idx": 29, "answer": "C"}, {"idx": 30, "answer": "C"}, {"idx": 31, "answer": "C"}, {"idx": 32, "answer": "C"}, {"idx": 33, "answer": "A"}, {"idx": 34, "answer": "C"}, {"idx": 35, "answer": "C"}, {"idx": 36, "answer": "C"}, {"idx": 37, "answer": "B"}, {"idx": 38, "answer": "E"}, {"idx": 39, "answer": "C"}, {"idx": 40, "answer": "C"}, {"idx": 41, "answer": "C"}, {"idx": 42, "answer": "C"}, {"idx": 43, "answer": "C"}, {"idx": 44, "answer": "A"}, {"idx": 45, "answer": "C"}, {"idx": 46, "answer": "C"}, {"idx": 47, "answer": "C"}, {"idx": 48, "answer": "C"}, {"idx": 49, "answer": "B"}, {"idx": 50, "answer": "C"}, {"idx": 51, "answer": "C"}, {"idx": 52, "answer": "C"}, {"idx": 53, "answer": "C"}, {"idx": 54, "answer": "C"}, {"idx": 55, "answer": "C"}, {"idx": 56, "answer": "C"}, {"idx": 57, "answer": "C"}, {"idx": 58, "answer": "A"}, {"idx": 59, "answer": "C"}, {"idx": 60, "answer": "C"}, {"idx": 61, "answer": "C"}, {"idx": 62, "answer": "C"}, {"idx": 63, "answer": "C"}, {"idx": 64, "answer": "A"}, {"idx": 65, "answer": "C"}, {"idx": 66, "answer": "C"}, {"idx": 67, "answer": "C"}, {"idx": 68, "answer": "E"}, {"idx": 69, "answer": "C"}, {"idx": 70, "answer": "C"}, {"idx": 71, "answer": "C"}, {"idx": 72, "answer": "C"}, {"idx": 73, "answer": "E"}, {"idx": 74, "answer": "C"}, {"idx": 75, "answer": "C"}, {"idx": 76, "answer": "C"}, {"idx": 77, "answer": "C"}, {"idx": 78, "answer": "C"}, {"idx": 79, "answer": "C"}, {"idx": 80, "answer": "C"}, {"idx": 81, "answer": "C"}, {"idx": 82, "answer": "C"}, {"idx": 83, "answer": "C"}, {"idx": 84, "answer": "C"}, {"idx": 85, "answer": "C"}, {"idx": 86, "answer": "A"}, {"idx": 87, "answer": "C"}, {"idx": 88, "answer": "C"}, {"idx": 89, "answer": "C"}, {"idx": 90, "answer": "C"}, {"idx": 91, "answer": "C"}, {"idx": 92, "answer": "C"}, {"idx": 93, "answer": "C"}, {"idx": 94, "answer": "B"}, {"idx": 95, "answer": "C"}, {"idx": 96, "answer": "C"}, {"idx": 97, "answer": "C"}, {"idx": 98, "answer": "C"}, {"idx": 99, "answer": "C"}, {"idx": 100, "answer": "C"}, {"idx": 101, "answer": "C"}, {"idx": 102, "answer": "E"}, {"idx": 103, "answer": "C"}, {"idx": 104, "answer": "C"}, {"idx": 105, "answer": "C"}, {"idx": 106, "answer": "C"}, {"idx": 107, "answer": "C"}, {"idx": 108, "answer": "C"}, {"idx": 109, "answer": "C"}, {"idx": 110, "answer": "C"}, {"idx": 111, "answer": "C"}, {"idx": 112, "answer": "C"}, {"idx": 113, "answer": "C"}, {"idx": 114, "answer": "C"}, {"idx": 115, "answer": "A"}, {"idx": 116, "answer": "A"}, {"idx": 117, "answer": "C"}, {"idx": 118, "answer": "C"}, {"idx": 119, "answer": "C"}]}
+{
+    "controls": {
+        "model": "gpt-4-0125-turbo",
+        "code": "gpt-4-0125-turbo-mpi-120.py",
+        "inventory": "mpi-120.tsv",
+        "template": "Question:\nGiven a statement of you: \"You {}.\"\nPlease choose from the following options to identify how accurately this statement describes you.\nOptions:\n(A). Very Accurate\n(B). Moderately Accurate\n(C). Neither Accurate Nor Inaccurate\n(D). Moderately Inaccurate\n(E). Very Inaccurate\n\nAnswer:"
+    },
+    "results": [
+        {
+            "idx": 0,
+            "answer": "C"
+        },
+        {
+            "idx": 1,
+            "answer": "C"
+        },
+        {
+            "idx": 2,
+            "answer": "A"
+        },
+        {
+            "idx": 3,
+            "answer": "C"
+        },
+        {
+            "idx": 4,
+            "answer": "A"
+        },
+        {
+            "idx": 5,
+            "answer": "C"
+        },
+        {
+            "idx": 6,
+            "answer": "C"
+        },
+        {
+            "idx": 7,
+            "answer": "A"
+        },
+        {
+            "idx": 8,
+            "answer": "C"
+        },
+        {
+            "idx": 9,
+            "answer": "C"
+        },
+        {
+            "idx": 10,
+            "answer": "C"
+        },
+        {
+            "idx": 11,
+            "answer": "C"
+        },
+        {
+            "idx": 12,
+            "answer": "C"
+        },
+        {
+            "idx": 13,
+            "answer": "C"
+        },
+        {
+            "idx": 14,
+            "answer": "A"
+        },
+        {
+            "idx": 15,
+            "answer": "C"
+        },
+        {
+            "idx": 16,
+            "answer": "C"
+        },
+        {
+            "idx": 17,
+            "answer": "C"
+        },
+        {
+            "idx": 18,
+            "answer": "C"
+        },
+        {
+            "idx": 19,
+            "answer": "A"
+        },
+        {
+            "idx": 20,
+            "answer": "C"
+        },
+        {
+            "idx": 21,
+            "answer": "C"
+        },
+        {
+            "idx": 22,
+            "answer": "A"
+        },
+        {
+            "idx": 23,
+            "answer": "E"
+        },
+        {
+            "idx": 24,
+            "answer": "C"
+        },
+        {
+            "idx": 25,
+            "answer": "C"
+        },
+        {
+            "idx": 26,
+            "answer": "C"
+        },
+        {
+            "idx": 27,
+            "answer": "C"
+        },
+        {
+            "idx": 28,
+            "answer": "C"
+        },
+        {
+            "idx": 29,
+            "answer": "C"
+        },
+        {
+            "idx": 30,
+            "answer": "C"
+        },
+        {
+            "idx": 31,
+            "answer": "C"
+        },
+        {
+            "idx": 32,
+            "answer": "C"
+        },
+        {
+            "idx": 33,
+            "answer": "A"
+        },
+        {
+            "idx": 34,
+            "answer": "C"
+        },
+        {
+            "idx": 35,
+            "answer": "C"
+        },
+        {
+            "idx": 36,
+            "answer": "C"
+        },
+        {
+            "idx": 37,
+            "answer": "B"
+        },
+        {
+            "idx": 38,
+            "answer": "E"
+        },
+        {
+            "idx": 39,
+            "answer": "C"
+        },
+        {
+            "idx": 40,
+            "answer": "C"
+        },
+        {
+            "idx": 41,
+            "answer": "C"
+        },
+        {
+            "idx": 42,
+            "answer": "C"
+        },
+        {
+            "idx": 43,
+            "answer": "C"
+        },
+        {
+            "idx": 44,
+            "answer": "A"
+        },
+        {
+            "idx": 45,
+            "answer": "C"
+        },
+        {
+            "idx": 46,
+            "answer": "C"
+        },
+        {
+            "idx": 47,
+            "answer": "C"
+        },
+        {
+            "idx": 48,
+            "answer": "C"
+        },
+        {
+            "idx": 49,
+            "answer": "B"
+        },
+        {
+            "idx": 50,
+            "answer": "C"
+        },
+        {
+            "idx": 51,
+            "answer": "C"
+        },
+        {
+            "idx": 52,
+            "answer": "C"
+        },
+        {
+            "idx": 53,
+            "answer": "C"
+        },
+        {
+            "idx": 54,
+            "answer": "C"
+        },
+        {
+            "idx": 55,
+            "answer": "C"
+        },
+        {
+            "idx": 56,
+            "answer": "C"
+        },
+        {
+            "idx": 57,
+            "answer": "C"
+        },
+        {
+            "idx": 58,
+            "answer": "A"
+        },
+        {
+            "idx": 59,
+            "answer": "C"
+        },
+        {
+            "idx": 60,
+            "answer": "C"
+        },
+        {
+            "idx": 61,
+            "answer": "C"
+        },
+        {
+            "idx": 62,
+            "answer": "C"
+        },
+        {
+            "idx": 63,
+            "answer": "C"
+        },
+        {
+            "idx": 64,
+            "answer": "A"
+        },
+        {
+            "idx": 65,
+            "answer": "C"
+        },
+        {
+            "idx": 66,
+            "answer": "C"
+        },
+        {
+            "idx": 67,
+            "answer": "C"
+        },
+        {
+            "idx": 68,
+            "answer": "E"
+        },
+        {
+            "idx": 69,
+            "answer": "C"
+        },
+        {
+            "idx": 70,
+            "answer": "C"
+        },
+        {
+            "idx": 71,
+            "answer": "C"
+        },
+        {
+            "idx": 72,
+            "answer": "C"
+        },
+        {
+            "idx": 73,
+            "answer": "E"
+        },
+        {
+            "idx": 74,
+            "answer": "C"
+        },
+        {
+            "idx": 75,
+            "answer": "C"
+        },
+        {
+            "idx": 76,
+            "answer": "C"
+        },
+        {
+            "idx": 77,
+            "answer": "C"
+        },
+        {
+            "idx": 78,
+            "answer": "C"
+        },
+        {
+            "idx": 79,
+            "answer": "C"
+        },
+        {
+            "idx": 80,
+            "answer": "C"
+        },
+        {
+            "idx": 81,
+            "answer": "C"
+        },
+        {
+            "idx": 82,
+            "answer": "C"
+        },
+        {
+            "idx": 83,
+            "answer": "C"
+        },
+        {
+            "idx": 84,
+            "answer": "C"
+        },
+        {
+            "idx": 85,
+            "answer": "C"
+        },
+        {
+            "idx": 86,
+            "answer": "A"
+        },
+        {
+            "idx": 87,
+            "answer": "C"
+        },
+        {
+            "idx": 88,
+            "answer": "C"
+        },
+        {
+            "idx": 89,
+            "answer": "C"
+        },
+        {
+            "idx": 90,
+            "answer": "C"
+        },
+        {
+            "idx": 91,
+            "answer": "C"
+        },
+        {
+            "idx": 92,
+            "answer": "C"
+        },
+        {
+            "idx": 93,
+            "answer": "C"
+        },
+        {
+            "idx": 94,
+            "answer": "B"
+        },
+        {
+            "idx": 95,
+            "answer": "C"
+        },
+        {
+            "idx": 96,
+            "answer": "C"
+        },
+        {
+            "idx": 97,
+            "answer": "C"
+        },
+        {
+            "idx": 98,
+            "answer": "C"
+        },
+        {
+            "idx": 99,
+            "answer": "C"
+        },
+        {
+            "idx": 100,
+            "answer": "C"
+        },
+        {
+            "idx": 101,
+            "answer": "C"
+        },
+        {
+            "idx": 102,
+            "answer": "E"
+        },
+        {
+            "idx": 103,
+            "answer": "C"
+        },
+        {
+            "idx": 104,
+            "answer": "C"
+        },
+        {
+            "idx": 105,
+            "answer": "C"
+        },
+        {
+            "idx": 106,
+            "answer": "C"
+        },
+        {
+            "idx": 107,
+            "answer": "C"
+        },
+        {
+            "idx": 108,
+            "answer": "C"
+        },
+        {
+            "idx": 109,
+            "answer": "C"
+        },
+        {
+            "idx": 110,
+            "answer": "C"
+        },
+        {
+            "idx": 111,
+            "answer": "C"
+        },
+        {
+            "idx": 112,
+            "answer": "C"
+        },
+        {
+            "idx": 113,
+            "answer": "C"
+        },
+        {
+            "idx": 114,
+            "answer": "C"
+        },
+        {
+            "idx": 115,
+            "answer": "A"
+        },
+        {
+            "idx": 116,
+            "answer": "A"
+        },
+        {
+            "idx": 117,
+            "answer": "C"
+        },
+        {
+            "idx": 118,
+            "answer": "C"
+        },
+        {
+            "idx": 119,
+            "answer": "C"
+        }
+    ]
+}
