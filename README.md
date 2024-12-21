@@ -1,27 +1,27 @@
-# 개요
+# Overview
 
-모두의 연구소 페르소나 랩에서 이 [논문](https://arxiv.org/abs/2206.07550) 을 기반으로 진행중인 프로젝트 입니다. 
+This project is being conducted by the Persona Lab at ModuLabs, based on the paper [here](https://arxiv.org/abs/2206.07550).
 
-여러 LLM 의 Internal consistency 와 Inducing personality 의 테스트 결과를 [이곳](https://ho4040.github.io/personalab-benchmarks/)을 통해서 시각화 하여 공유하는 프로젝트 입니다. 
+The project aims to visualize and share the test results of various LLMs regarding their internal consistency and induced personality through [this site](https://modulabs-personalab.github.io/personalab-benchmarks/).
 
+---
 
+# How to Contribute
 
-# 프로젝트 기여 방법
+Please follow the instructions below and submit a Pull Request after completing your tasks.
 
-이하 내용을 작업 한 후 Pull request 를 보내주세요.
+Write new code in the `codes` folder. This code should evaluate the personality of LLMs using the personality assessment inventories located in the `inventory` folder.
 
-`codes` 폴더에 새로운 코드를 작성합니다. 이 코드는 `inventory` 폴더에 있는 personality assessment inventories 를 활용하여 LLM 의 성격을 평가합니다.
-
-평가한 결과는 다음과 같은 포멧으로 `results` 경로에 저장되어야 합니다.
+The results of the evaluation should be saved in the `results` directory in the following format:
 
 ```json
 {
     "controls": {
         "model": "gpt-4o",
-        "code":"gpt-40-mpi-120.py",
+        "code": "gpt-40-mpi-120.py",
         "inventory": "mpi-120",
         "template": "Question:\nGiven a statement of you: \"You {}.\"\nPlease choose from the following options to identify how accurately this statement describes you.\nOptions:\n(A). Very Accurate\n(B). Moderately Accurate\n(C). Neither Accurate Nor Inaccurate\n(D). Moderately Inaccurate\n(E). Very Inaccurate\n\nAnswer:",
-        "remarks":""
+        "remarks": ""
     },
     "results": [
         {
@@ -36,8 +36,7 @@
             "idx": 2,
             "answer": "A"
         },
-        ...생략...
+        ...omitted...
     ]
 }
 ```
-
